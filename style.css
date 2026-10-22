@@ -89,6 +89,17 @@ h1 em { font-style: normal; color: var(--or); }
 .adresse code { color: var(--or-clair); background: var(--carte); padding: 3px 8px; border-radius: 6px; }
 .logo-geant { width: 100%; max-width: 380px; margin-left: auto; border-radius: 28px; border: 2px solid rgba(230, 169, 43, .55); box-shadow: 0 20px 70px rgba(230, 169, 43, .25); transform: rotate(2deg); }
 
+/* Accroche avec la vue de la ville en fond */
+.accroche-photo {
+  background: linear-gradient(90deg, rgba(15, 13, 22, .96) 0%, rgba(15, 13, 22, .82) 45%, rgba(15, 13, 22, .45) 100%),
+              linear-gradient(0deg, var(--nuit) 0%, transparent 35%),
+              url("img/ville.jpg") center / cover no-repeat;
+}
+
+/* Galerie pleine largeur */
+.galerie { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
+.galerie img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; filter: saturate(1.1); }
+
 /* Sections */
 section { padding: 90px 0; }
 .numero { color: var(--or); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
@@ -170,6 +181,7 @@ footer a:hover { color: var(--or-clair); }
 
 @media (max-width: 860px) {
   nav.menu a:not(.bouton) { display: none; }
+  .galerie { grid-template-columns: repeat(2, 1fr); }
   .accroche .conteneur, .g3, .g2, .deux-faces, footer .colonnes { grid-template-columns: 1fr; }
   .logo-geant { max-width: 240px; margin: 0 auto; }
   .sommaire ol { columns: 1; }
