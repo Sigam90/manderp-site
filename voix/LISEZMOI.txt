@@ -1,0 +1,2 @@
+Modèle de reconnaissance vocale française vosk-model-small-fr-0.22 (Alpha Cephei, licence Apache 2.0),
+utilisé hors ligne par les PNJ du serveur Mandé RP.
